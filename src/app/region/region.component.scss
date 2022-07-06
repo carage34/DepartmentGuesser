@@ -1,0 +1,97 @@
+.side {
+  background-color: blue;
+  height: 100px;
+  width: 40px;
+  flex: 1;
+}
+
+.mid {
+  background-color: red;
+  height:100px;
+  width: 30px;
+  flex: 1;
+}
+
+.container-box {
+  display: flex;
+}
+
+button {
+  margin: 2px;
+}
+
+//.clavier {
+//  position: fixed;
+//  width: 500px;
+//  height: 200px;
+//  top: 80%;
+//  left: 50%;
+//  margin-top: -100px; /* Negative half of height. */
+//  margin-left: -250px; /* Negative half of width. */
+//}
+
+.clavier {
+
+}
+
+.bouton {
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+  box-shadow: 3px 3px 5px gray;
+}
+
+.erase {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+.erase span {
+  margin: 0 auto !important;
+  margin-top: -4px !important;
+}
+
+.bouton span {
+ font-size: 30px;
+  display: block;
+  margin-left: 26%;
+  margin-top: -10%;
+}
+
+.input {
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid black;
+  height: 40px;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 3px 3px 5px gray;
+  text-align: center;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.txt {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 415px) {
+  .image {
+    display: block !important;
+  }
+
+  .input {
+    width: 100% !important;
+  }
+
+  img {
+    width: 100% !important;
+  }
+}
+
+.question {
+  text-align: center;
+}

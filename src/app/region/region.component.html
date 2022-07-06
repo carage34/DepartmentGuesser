@@ -1,0 +1,39 @@
+<div class="container-fluid">
+
+    <div class="d-flex justify-content-center image">
+      <img [attr.src]="'/assets/img/'+this.idRegion+'.svg'" alt="" >
+    </div>
+  <div class="question" *ngIf="this.dpt">
+    <h2>{{ this.dpt[this.id].nom }}</h2>
+  </div>
+    <div class="input">
+      <span>
+         {{this.input}}
+      </span>
+
+    </div>
+
+  <div class="clavier">
+    <div class="d-flex flex-row justify-content-center" *ngFor="let ngGroupe of [[1,2,3], [4,5,6], [7,8,9], [0]]">
+      <div *ngFor="let nb of ngGroupe" class="bouton" (click)="bouton(nb)">
+        <span>{{nb}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="bouton erase d-flex justify-content-center" *ngIf="!this.isSubmit">
+    <span  (click)="this.input = this.input.substring(0, this.input.length - 1)">Effacer</span>
+  </div>
+  <div class="bouton erase d-flex justify-content-center" *ngIf="!this.isSubmit">
+    <span  (click)="this.isSubmit = true">Valider</span>
+  </div>
+  <div class="bouton erase d-flex justify-content-center" *ngIf="this.isSubmit">
+    <span  (click)="next();">Suivant</span>
+  </div>
+  <div class="txt d-flex justify-content-center">
+    <p *ngIf="this.isSubmit && this.input == this.dpt[this.id].code">Bonne réponse</p>
+    <p *ngIf="this.isSubmit && this.input != this.dpt[this.id].code">La bonne réponse était {{ this.dpt[this.id].code }}</p>
+  </div>
+
+</div>
+
+
